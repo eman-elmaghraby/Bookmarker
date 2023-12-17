@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,500;1,400&family=Alegreya+Sans&family=Amatic+SC&family=Open+Sans:ital,wght@1,700&family=Pacifico&family=Poppins:wght@100&family=Roboto+Flex:opsz,wght@8..144,800&family=Rubik+Bubbles&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>BookMark</title>
+</head>
+<body>
+    <main>
+        <div class="container d-flex flex-column align-items-center py-5">
+            
+            <!-- Start Title -->
+            <h1 class="position-relative py-2">Bookmarker</h1>
+           <!-- End Title -->
+
+            <!-- Start BookMark Body -->
+            <section class="bookMarkBody w-100 py-3 mt-5 border border-2 border-dark border-start-0 border-end-0">
+                 
+                <!-- End Title In The Header -->
+                <div class="title">
+                    <h2 class="fw-bolder text-center">
+                        <i class="fa-solid fa-bookmark"></i>
+                         Bookmark your favorite sites
+                         <i class="fa-solid fa-bookmark"></i>
+                        </h2>
+                </div>
+                <!-- End Title In The Header -->
+                
+                <!-- Start Inputs -->
+                <div class="siteForm w-100 d-flex flex-column align-items-center">
+                  <div class="w-100">
+                    <label for="siteNameInput" class="my-2 fw-semibold">
+                        <i class="fa-solid fa-book-bookmark pe-2"></i> Site Name :</label>
+                    <input type="text" onkeyup="classNameInput(siteNameInput)" placeholder="Site Name" class="form-control  mb-3" id="siteNameInput">
+                 
+                  </div>
+                  <div class="w-100">
+                    <label for="siteUrlInput" class="my-2 fw-semibold">
+                        <i class="fa-solid fa-link pe-2"></i>
+                        Site URL
+                    </label>
+                    <input type="text" onkeyup="classUrlInput(siteUrlInput)" placeholder="ex: www.*********.com" class="form-control  mb-3" id="siteUrlInput">
+                  </div>
+                    <button class="btn btn-danger px-5" onclick="addSite()" id="submiteBtn">Submite</button>
+                </div>
+                <!-- End Inputs -->
+
+            </section>
+             <!-- End BookMark Body -->
+
+            <!-- Satrt Table -->
+            <table class="table mt-4 text-center w-100 bg-light ">
+                <thead id="tHead">
+                    <th class="py-2">Index</th>
+                    <th class="py-2">Website Name</th>
+                    <th class="py-2">Visit</th>
+                    <th class="py-2">Delete</th>
+                </thead>
+                <tbody id="tBody"></tbody>
+            </table>
+            <!-- End Table -->
+            
+        </div>
+    </main>
+
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>
